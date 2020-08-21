@@ -1,0 +1,163 @@
+@import "config";
+@import "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $color-1;
+}
+
+body {
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  background: $bg-1;
+}
+
+.alert-banner {
+  background: $main-bg;
+  color: $color-1;
+  text-align: center;
+  padding: 20px;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.banner-main {
+  padding: 30px 20px;
+  background: $bg-1;
+  .content-holder {
+    font-family: acumin-pro-condensed, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      a {
+        text-transform: uppercase;
+        color: $main-color;
+        font-size: 2.3rem;
+      }
+    }
+
+    nav {
+      margin: auto 0;
+      display: flex;
+      a {
+        color: $color-3;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        transition: color 0.5s;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+      div {
+        display: inline-block;
+        margin: auto 0;
+        form {
+          display: inline-block;
+          input {
+            display: inline-block;
+            width: 0;
+            border: none;
+            border-bottom: $color-2 1px solid;
+            height: 18px;
+            color: $main-color;
+            z-index: 0;
+            background: none;
+            transition: all 0.5s;
+
+            &::placeholder {
+              color: $main-color;
+            }
+          }
+        }
+        button {
+          color: $main-color;
+          z-index: 1;
+          background: $bg-1;
+        }
+
+        &:hover {
+          form {
+            input {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-secondary {
+  background: $bg-2;
+  .content-holder {
+    font-family: acumin-pro-condensed, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    .nav-secondary {
+      display: flex;
+      margin: auto 0;
+      > a {
+        padding: 25px 38px;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: $main-bg;
+        }
+      }
+      .social {
+        display: flex;
+        margin: auto 0;
+        padding-left: 10px;
+        width: 90px;
+        justify-content: space-between;
+
+        a {
+          color: $color-3;
+          transition: color 0.5s;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cloudflare-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+  img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .image-description {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    background: rgba($color: #000000, $alpha: 0.5);
+    color: #fff;
+    padding: 20px 70px;
+    width: 538px;
+
+    .description-heading {
+      font-size: 1.1rem;
+      padding: 0.2rem 0;
+    }
+  }
+}

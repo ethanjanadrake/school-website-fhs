@@ -1,0 +1,21 @@
+@import "config";
+
+.container {
+  padding: 0 20px;
+}
+
+.content-holder {
+  max-width: $website-width;
+  margin: auto;
+}
+
+%btn-shared {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+button {
+  @extend %btn-shared;
+}
