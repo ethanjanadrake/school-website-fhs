@@ -19,3 +19,7 @@
 button {
   @extend %btn-shared;
 }
+
+li {
+  list-style: none;
+}
