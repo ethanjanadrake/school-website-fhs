@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+body {
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  background: #fff; }
+
 .container {
   padding: 0 20px; }
 
@@ -13,18 +25,6 @@ button {
 
 li {
   list-style: none; }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-a {
-  text-decoration: none;
-  color: #fff; }
-
-body {
-  font-family: acumin-pro-semi-condensed, sans-serif;
-  background: #fff; }
 
 .alert-banner {
   background: #540903;
@@ -57,33 +57,37 @@ body {
           color: #8b0e05; }
       .banner-main .content-holder nav #quicklinks {
         position: relative; }
-        .banner-main .content-holder nav #quicklinks:hover ul {
-          display: block; }
+        .banner-main .content-holder nav #quicklinks #quicklinks-wrapper {
+          overflow: hidden;
+          height: 0; }
         .banner-main .content-holder nav #quicklinks ul {
           position: absolute;
           box-sizing: border-box;
           margin-top: 10px;
           padding: 0;
           background: #fff;
-          border: 1px solid #979797;
           border-radius: 3%;
           overflow: hidden;
           width: 200%;
           left: -50%;
           z-index: 2;
-          transition: height 0.5s;
-          display: none; }
+          height: 0;
+          transition: all 0.5s; }
           .banner-main .content-holder nav #quicklinks ul li {
             padding: 5px 0; }
+            .banner-main .content-holder nav #quicklinks ul li a {
+              padding: 0 0 0 10px;
+              width: 100%;
+              height: 100%; }
             .banner-main .content-holder nav #quicklinks ul li:nth-child(even) {
               background: #f1f1f1; }
             .banner-main .content-holder nav #quicklinks ul li:hover {
               background: #540903; }
               .banner-main .content-holder nav #quicklinks ul li:hover a {
                 color: #fff; }
-            .banner-main .content-holder nav #quicklinks ul li div {
-              width: 100%;
-              height: 100%; }
+        .banner-main .content-holder nav #quicklinks:hover ul {
+          height: 353px;
+          border: 1px solid #979797; }
       .banner-main .content-holder nav div {
         display: inline-block;
         margin: auto 0; }
@@ -158,3 +162,79 @@ body {
     .cloudflare-box .image-description .description-heading {
       font-size: 18px;
       padding: 0.2rem 0; }
+
+#news-section {
+  padding: 50px 0 70px 0;
+  background: #f4f4f499; }
+  #news-section h2 {
+    font-size: 30px;
+    font-family: acumin-pro-condensed, sans-serif;
+    text-transform: uppercase;
+    color: #8b0e05; }
+  #news-section .content-holder {
+    display: grid;
+    grid-template-columns: 6fr 4fr; }
+    #news-section .content-holder .news-heading {
+      display: flex;
+      justify-content: space-between; }
+      #news-section .content-holder .news-heading p a {
+        color: #757575;
+        transition: color 0.5s;
+        font-size: 15px; }
+        #news-section .content-holder .news-heading p a:hover {
+          color: #8b0e05; }
+    #news-section .content-holder .news-feed {
+      padding-right: 80px; }
+      #news-section .content-holder .news-feed .news-heading {
+        margin-bottom: 40px; }
+      #news-section .content-holder .news-feed .news-feed-box {
+        margin-left: 60px;
+        background: #fff;
+        border: 1px solid #c4c4c4; }
+        #news-section .content-holder .news-feed .news-feed-box ul li {
+          box-sizing: border-box;
+          padding: 20px;
+          border-bottom: 1px solid #c4c4c4; }
+          #news-section .content-holder .news-feed .news-feed-box ul li:nth-child(even) {
+            background: #f1f1f1; }
+          #news-section .content-holder .news-feed .news-feed-box ul li a {
+            transition: color 0.5s; }
+            #news-section .content-holder .news-feed .news-feed-box ul li a:hover {
+              color: #343845; }
+      #news-section .content-holder .news-feed a {
+        color: #8b0e05;
+        font-size: 18px;
+        font-family: acumin-pro-semi-condensed, sans-serif; }
+    #news-section .content-holder .calendar {
+      padding-left: 80px;
+      border-left: 1px solid #c4c4c4; }
+      #news-section .content-holder .calendar .news-heading {
+        margin-bottom: 30px; }
+      #news-section .content-holder .calendar .calendar-box > ul > li {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        color: #757575;
+        font-size: 15px; }
+        #news-section .content-holder .calendar .calendar-box > ul > li a {
+          color: #8b0e05;
+          font-size: 18px;
+          transition: color 0.5s; }
+          #news-section .content-holder .calendar .calendar-box > ul > li a:hover {
+            color: #343845; }
+        #news-section .content-holder .calendar .calendar-box > ul > li .date-bubble {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: #343845;
+          color: #fff;
+          text-align: center;
+          display: grid;
+          grid-template-rows: 1fr 2fr;
+          text-transform: uppercase;
+          box-sizing: border-box;
+          padding: 10px;
+          margin-bottom: 20px;
+          margin-right: 20px; }
+          #news-section .content-holder .calendar .calendar-box > ul > li .date-bubble span {
+            font-size: 36px;
+            line-height: 1; }
